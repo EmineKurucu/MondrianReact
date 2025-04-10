@@ -13,21 +13,21 @@ export function InitialPage() { // export tanımlayınca başka dosyada kullanab
   return (
     <>
       <div style={styles.container}>
-        <h1 style={styles.header}>Welcome to Composition with Red, Blue and Yellow</h1>
-        <p style={styles.paragraph}>Enter your name to see the painting of Piet Mondrian</p>
+        <h1 style={styles.header}>"Composition with Red, Blue and Yellow"a Hoşgeldiniz</h1>
+        <p style={styles.paragraph}>Piet Mondiran'ın Eserini Görmek İçin Adınızı Giriniz</p>
         <form autoComplete="on" onSubmit={handleSubmit} style={styles.form}>
           <table>
             <tbody>
               <tr>
-                <td>Name Surname: </td>
+                <td>Ad Soyad: </td>
                 <td>
                   <input
-                    name="nameSurname"
+                    name="adSoyad"
                     type="text"
                     size="25"
                     maxLength="50"
                     required
-                    placeholder="Name Surname"
+                    placeholder="adSoyad"
                     autoFocus
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
@@ -52,36 +52,46 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     height: "100vh",
-    marginTop: "20px",
-    backgorunColor : "rgb(0, 24, 45)"
+    width: "100%",
+    backgroundColor: "rgb(0, 24, 45)",
+    margin: 0,
+    padding: 0,
+    top: 0,
+    left :0 ,
+    position : "fixed"
 
-  },
+  
+},
 
 
   header: {
     fontSize: "2em",
     margin: 0, 
-    padding: "10px"
+    padding: "10px",
+    alignItems : "center"
   },
 
 
   paragraph: {
     fontSize: "1.2em",
     margin: 0,
-    padding: "10px"
+    padding: "10px",
+    alignItems : "center"
   },
 
 
   form: {
     marginTop: "20px", 
+    alignItems: "center"
   },
 
   button: {
     padding: "10px 20px",
     fontSize: "1em",
-    marginTop: "20px" 
+    marginTop: "20px" ,
+    alignItems: "center"
   }
 
 
