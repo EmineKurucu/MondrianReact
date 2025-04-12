@@ -1,14 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {setUser} from "../userSlice";
+import { useDispatch } from "react-redux"; 
+
 
 export function InitialPage() { // export tanımlayınca başka dosyada kullanabiliriz
   const [fullName, setFullName] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(setUser({ adSoyad: fullName }));
     navigate("/mondrian");
   };
+
+  
+
 
   return (
     <>

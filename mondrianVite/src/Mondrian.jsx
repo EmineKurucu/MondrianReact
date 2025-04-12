@@ -1,12 +1,13 @@
 import React from "react";
 import Box, { Height40Beige, Width40Beige } from "./component/Box";
+import { useSelector } from "react-redux";
 
 // ana component'ten objectler ile şekil oluşturma
 
 function Mondrian() {
+  const adSoyad = useSelector((state) => state.user.adSoyad);
   return (
     <div style={{
-      position: "relative",
       width: "100%",
       height: "100vh",
       backgroundColor: "rgb(0, 24, 45)",
@@ -15,8 +16,13 @@ function Mondrian() {
       alignItems: "center",
       position : "fixed",
       top : 0,
-      left : 0
+      left : 0,
+      flexDirection: "column"
     }}>
+      <div style={{ color: "white", fontSize: "1.5em", marginBottom: "20px" }}>
+        Merhaba {adSoyad}, Mondrian Tasarımımı Görmek İster Misiniz?
+      </div>
+  
       <div style={{
         position: "relative",
         width: "500px",
