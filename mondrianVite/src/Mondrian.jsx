@@ -20,7 +20,7 @@ function Mondrian() {
       flexDirection: "column"
     }}>
       <div style={{ color: "white", fontSize: "1.5em", marginBottom: "20px" }}>
-        Merhaba {adSoyad}, Mondrian Tasarımımı Görmek İster Misiniz?
+        Merhaba {adSoyad}! Mondrian tasarımım nasıl gözüküyor?
       </div>
   
       <div style={{
